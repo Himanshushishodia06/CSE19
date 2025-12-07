@@ -1,0 +1,68 @@
+</html> <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Flex</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            height: 60vh;
+            width: 100vw;
+            gap: 10px;
+            justify-content: space-evenly;
+            align-items: center;
+        
+        }
+        .item{
+            background-color: #2196F3;
+            padding: 20px;
+            text-align: center;
+            flex-grow: 1;
+        }
+        .item1{
+            background-color: #00bbff;
+            flex: 2;
+        }
+        .item2{
+            background-color: aqua;
+            flex: 1;
+        }
+        .item3{
+            background-color: rgb(255, 125, 3);
+            flex: 3;
+        }
+        .item4{
+            background-color: violet;
+            flex: 1;
+    
+        }
+        .item5{
+            background-color: lightsalmon;
+            flex: 2;
+        }
+        .item6{
+            background-color: aquamarine;
+            flex: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <h2 style="color: rgb(111, 19, 215);" text-align="center">Amazon </h2>
+      <div class ="container">
+        <div class="item item1">Home</div>
+        <div class="item item2">About us</div>
+        <div class="item item3">Products</div>
+        <div class="item item4">My Profile</div>
+        <div class="item item5">Help Center</div>
+        <div class="item item6">Logout</div>
+    
+</body>
+</html>

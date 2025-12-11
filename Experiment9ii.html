@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Product Grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr); 
+            gap: 20px; 
+        }
+
+        .product-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .product-card h3 {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .product-card p {
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        .product-card .price {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #e60000;
+        }
+
+        @media (min-width: 600px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 900px) {
+            .product-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Our Products</h1>
+        <div class="product-grid">
+
+            <div class="product-card">
+                <img src="data:image/jpeg;base64,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" alt="Product 1">
+                <h3>Product One</h3>
+                <p>This is a short description of Product One. It's amazing!</p>
+                <span class="price">₹8,890</span>
+            </div>
+
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy-0sfnAGHyCwH3w1EP8HaGUa-XmCjTPxdaQ&s" alt="Product 2">
+                <h3>Product Two</h3>
+                <p>This is a short description of Product Two. You'll love it!</p>
+                <span class="price">₹89,990</span>
+            </div>
+
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeB--PK6NqCXBYZRNmAyqsVc1uH6Uc698cDQ&s" alt="Product 3">
+                <h3>Product Three</h3>
+                <p>This is a short description of Product Three. </p>
+                <span class="price">₹5,499</span>
+            </div>
+
+            <div class="product-card">
+                <img src="https://imagescdn.thecollective.in/img/app/product/1/1066319-16461122.jpg?w=900&auto=format" alt="Product 4">
+                <h3>Product Four</h3>
+                <p>This is a short description of Product Four. Top quality!</p>
+                <span class="price">₹3,999</span>
+            </div>
+
+            <div class="product-card">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSujlESZ5kbKqZQm3PAAkcjK8vzwZT6YDkt3X8qSkpr2F_GGIQyLtgg6e8eI2m4x25AmbyZcHr-vj_gbsQpapgeOwl_dYcVPluOboHRaxtirqqYUv0418v-2A" alt="Product 5">
+                <h3>Product Five</h3>
+                <p>This is a short description of Product Five. Essential item!</p>
+                <span class="price">₹16,999</span>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSEbb5WLAn_jpZ-znXWo59SEso8X4D3T0Y8NTQWdcOvCcOZYxM__9C7uUFun7Hb2G_hlmfrpG5jt8JGTe_bnzefAJvC0I--q6w2Lxz6BSXX4Y0kVRMLay2Z" alt="Product 6">
+                <h3>Product Six</h3>
+                <p>This is a short description of Product Six. Best seller!</p>
+                <span class="price">₹6,999</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

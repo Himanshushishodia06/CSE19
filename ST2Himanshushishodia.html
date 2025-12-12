@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+
+    <style>
+        /* ------------ RESET ------------ */
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* ------------ NAVBAR ------------ */
+        .navbar{
+            width: 100%;
+            background: #111;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 25px;
+        }
+
+        .navbar .logo{
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .navbar ul{
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .navbar ul li a{
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .navbar ul li a:hover{
+            color: #ff9800;
+        }
+
+        /* MOBILE NAVBAR */
+        @media(max-width: 600px){
+            .navbar ul{
+                display: none;
+            }
+        }
+
+        /* ------------ PRODUCT SECTION ------------ */
+        .product{
+            width: 100%;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .product img{
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        .btn{
+            margin-top: 20px;
+            padding: 12px 20px;
+            font-size: 18px;
+            border: none;
+            background: #ff9800;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover{
+            background: #e89100;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">MyStore</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Cart</a></li>
+        </ul>
+    </nav>
+
+    <!-- PRODUCT IMAGE & BUTTON -->
+    <div class="product">
+        <img src="data:image/jpeg;base64,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" alt="Product Image">
+        <button class="btn">Add to Cart</button>
+    </div>
+
+</body>
+</html>
